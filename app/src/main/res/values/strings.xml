@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">FarmerApp</string>
     <string name="donateTitle">Welcome</string>
-    <string name="donateSubtitle">Please Give Generously</string>
-    <string name="farmerButton">Donate</string>
-    <string name="paypal">PayPal</string>
-    <string name="direct">Direct</string>
+    <string name="donateSubtitle">Add some Produce</string>
+    <string name="farmerButton">Add</string>
+    <string name="fruit">Fruit</string>
+    <string name="vegetable">Vegetable</string>
     <string name="amount">Amount</string>
     <string name="total">Total so Far</string>
     <string name="totalSoFar">$ Total</string>

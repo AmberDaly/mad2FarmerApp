@@ -62,7 +62,7 @@ class FarmerFragment : Fragment() {
             if(totalDonated >= layout.progressBar.max)
                 Toast.makeText(context,"Donate Amount Exceeded!",Toast.LENGTH_LONG).show()
             else {
-                val paymentmethod = if(layout.paymentMethod.checkedRadioButtonId == R.id.Direct) "Direct" else "Paypal"
+                val paymentmethod = if(layout.paymentMethod.checkedRadioButtonId == R.id.Vegetable) "Vegetable" else "fruit"
                 totalDonated += amount
                 layout.totalSoFar.text = "$$totalDonated"
                 layout.progressBar.progress = totalDonated
