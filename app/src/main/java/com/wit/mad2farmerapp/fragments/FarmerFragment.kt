@@ -36,13 +36,7 @@ class FarmerFragment : Fragment() {
         activity?.title = getString(R.string.action_farmer)
 
         fragBinding.progressBar.max = 10000
-        fragBinding.amountPicker.minValue = 1
-        fragBinding.amountPicker.maxValue = 1000
 
-        fragBinding.amountPicker.setOnValueChangedListener { _, _, newVal ->
-            //Display the newly selected number to paymentAmount
-            fragBinding.paymentAmount.setText("$newVal")
-        }
         setButtonListener(fragBinding)
         return root;
     }
@@ -57,13 +51,15 @@ class FarmerFragment : Fragment() {
 
     fun setButtonListener(layout: FragmentFarmerBinding) {
         layout.farmerButton.setOnClickListener {
-            val amount = if (layout.paymentAmount.text.isNotEmpty())
-                layout.paymentAmount.text.toString().toInt() else layout.amountPicker.value
+            val amount =
+                layout.paymentAmount.text.toString().toInt()
+
+
             if(totalDonated >= layout.progressBar.max)
                 Toast.makeText(context,"Donate Amount Exceeded!",Toast.LENGTH_LONG).show()
             else {
                 val paymentmethod = if(layout.paymentMethod.checkedRadioButtonId == R.id.Vegetable) "Vegetable" else "fruit"
-                totalDonated += amount
+
                 layout.totalSoFar.text = "$$totalDonated"
                 layout.progressBar.progress = totalDonated
                 app.farmersStore.create(FarmerModel(paymentmethod = paymentmethod,amount = amount))
