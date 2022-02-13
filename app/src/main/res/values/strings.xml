@@ -5,21 +5,20 @@
     <string name="farmerButton">Add</string>
     <string name="fruit">Fruit</string>
     <string name="vegetable">Vegetable</string>
-    <string name="amount">Amount</string>
-    <string name="total">Total so Far</string>
-    <string name="totalSoFar">$ Total</string>
+    <string name="enter">Enter Produce</string>
+
     <string name="reportTitle">Donations Report</string>
     <string name="defaultAmount">00</string>
     <string name="defaultMethod">N/A</string>
-    <string name="enter_amount">Enter Amount</string>
-    <string name="action_farmer">Donate</string>
-    <string name="action_produce">Report</string>
+    <string name="enter_amount">Here</string>
+    <string name="action_farmer">Add</string>
+    <string name="action_produce">Produce</string>
 
     <string name="action_share">Share</string>
     <string name="action_send">Send</string>
     <string name="group_communicate">Communicate</string>
 
-    <string name="nav_header_title">DonationX (Lab)</string>
-    <string name="nav_header_subtitle">voteforhomer@android.com</string>
+    <string name="nav_header_title">Amber Daly</string>
+    <string name="nav_header_subtitle">20084561@wit.ie</string>
     <string name="nav_header_desc">Navigation header</string>
 </resources>

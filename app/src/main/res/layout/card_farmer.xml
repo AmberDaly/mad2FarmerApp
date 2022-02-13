@@ -35,7 +35,7 @@
             tools:text="€1000" />
 
         <TextView
-            android:id="@+id/paymentmethod"
+            android:id="@+id/produceType"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"

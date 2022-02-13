@@ -26,8 +26,8 @@ class FarmerAdapter constructor(private var farmers: List<FarmerModel>)
     inner class MainHolder(val binding : CardFarmerBinding) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(farmer: FarmerModel) {
-            binding.paymentamount.text = farmer.amount.toString()
-            binding.paymentmethod.text = farmer.paymentmethod
+            binding.paymentamount.text = farmer.enter.toString()
+            binding.produceType.text = farmer.produceType
             binding.imageIcon.setImageResource(R.mipmap.ic_launcher_round)
         }
     }

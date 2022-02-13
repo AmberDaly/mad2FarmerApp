@@ -5,5 +5,5 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class FarmerModel (var id: Long = 0,
-                        val paymentmethod: String = "N/A",
-                        val amount: Int = 0) : Parcelable
+                        val produceType: String = "N/A",
+                        val enter: Int = 0) : Parcelable

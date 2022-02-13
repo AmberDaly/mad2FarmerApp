@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/farmerFragment"
         android:name="com.wit.mad2farmerapp.fragments.FarmerFragment"
-        android:label="fragment_farmer"
+        android:label="farmer market"
         tools:layout="@layout/fragment_farmer" >
         <action
             android:id="@+id/action_farmerFragment_to_produceFragment"
@@ -21,7 +21,7 @@
     <fragment
         android:id="@+id/produceFragment"
         android:name="com.wit.mad2farmerapp.fragments.ProduceFragment"
-        android:label="fragment_produce"
+        android:label="produce"
         tools:layout="@layout/fragment_produce" >
         <action
             android:id="@+id/action_produceFragment_to_farmerFragment"

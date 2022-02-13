@@ -14,7 +14,7 @@ import com.wit.mad2farmerapp.models.FarmerModel
 
 class FarmerFragment : Fragment() {
     lateinit var app: FarmerApp
-    var totalDonated = 0
+
     private var _fragBinding: FragmentFarmerBinding? = null
     private val fragBinding get() = _fragBinding!!
     //lateinit var navController: NavController
@@ -23,7 +23,7 @@ class FarmerFragment : Fragment() {
         super.onCreate(savedInstanceState)
         app = activity?.application as FarmerApp
         setHasOptionsMenu(true)
-        //navController = Navigation.findNavController(activity!!, R.id.nav_host_fragment)
+
     }
 
     override fun onCreateView(
@@ -35,7 +35,7 @@ class FarmerFragment : Fragment() {
         val root = fragBinding.root
         activity?.title = getString(R.string.action_farmer)
 
-        fragBinding.progressBar.max = 10000
+
 
         setButtonListener(fragBinding)
         return root;
@@ -51,19 +51,17 @@ class FarmerFragment : Fragment() {
 
     fun setButtonListener(layout: FragmentFarmerBinding) {
         layout.farmerButton.setOnClickListener {
-            val amount =
+            val enter =
                 layout.paymentAmount.text.toString().toInt()
 
 
-            if(totalDonated >= layout.progressBar.max)
-                Toast.makeText(context,"Donate Amount Exceeded!",Toast.LENGTH_LONG).show()
-            else {
-                val paymentmethod = if(layout.paymentMethod.checkedRadioButtonId == R.id.Vegetable) "Vegetable" else "fruit"
 
-                layout.totalSoFar.text = "$$totalDonated"
-                layout.progressBar.progress = totalDonated
-                app.farmersStore.create(FarmerModel(paymentmethod = paymentmethod,amount = amount))
-            }
+                val produceType = if(layout.produceType.checkedRadioButtonId == R.id.Vegetable) "Vegetable" else "fruit"
+
+
+
+                app.farmersStore.create(FarmerModel(produceType = produceType,enter = enter))
+
         }
     }
 
@@ -86,10 +84,5 @@ class FarmerFragment : Fragment() {
         _fragBinding = null
     }
 
-    override fun onResume() {
-        super.onResume()
-        totalDonated = app.farmersStore.findAll().sumOf { it.amount }
-        fragBinding.progressBar.progress = totalDonated
-        fragBinding.totalSoFar.text = "$$totalDonated"
-    }
+
 }
